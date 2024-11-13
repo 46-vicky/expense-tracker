@@ -33,21 +33,23 @@ const ExpenseForm = ({expenses,setExpenses}) => {
 
   }
   return (
-    <div>
+    <div className="form-cont">
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="input-sec title-sec">
           <label htmlFor="title">Title</label>
           <input type="text" id="title" required onChange={handleTitle} value={newExpense.title}/>
         </div>
-        <div>
+        <div className="input-sec amount-sec">
           <label htmlFor="amount">Amount</label>
           <input type="text" id="amount" required onChange={handleAmount} value={newExpense.amount}/>
         </div>
-        <div>
+        <div className="input-sec date-sec">
           <label htmlFor="date">Date</label>
           <input type="date" id="date" required onChange={handleDate} value={newExpense.date}/>
         </div>
-        <button type="submit">Add Expense</button>
+        <div className="btn-sec">
+          <button type="submit" className="form-btn">Add Expense</button>
+        </div>
       </form>
     </div>
   );
