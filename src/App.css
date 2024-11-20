@@ -54,7 +54,12 @@ body{
 }
 .filter-sec{
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.filter-part{
+  display: flex;
   align-items: center;
 }
 .filter-sec select{

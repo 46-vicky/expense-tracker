@@ -4,6 +4,7 @@ import ExpenseFilter from './ExpenseFilter'
 const ExpenseChart = ({years,filteredExpense,selectedYear,setSelectedYear}) => { 
     
     const monthlyExpense = Array(12).fill(0);
+    
     filteredExpense.map((expense)=>{
         const month = new Date(expense.date).getMonth();
         monthlyExpense[month]  += Number(expense.amount); 
@@ -25,7 +26,7 @@ const ExpenseChart = ({years,filteredExpense,selectedYear,setSelectedYear}) => {
 
   return (
     <div className='chart-sec'>
-        <ExpenseFilter years = {years} selectedYear={selectedYear} setSelectedYear={setSelectedYear}/>
+        <ExpenseFilter years = {years} selectedYear={selectedYear} setSelectedYear={setSelectedYear} filteredExpense={filteredExpense}/>
         <div className='chart-container'>
         {barChart}
         </div>
